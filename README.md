@@ -10,12 +10,21 @@ The game is over once the user guesses the computer’s number. When the game is
 Here’s a rough pseudocode outline of the program that gave this output:
 
 greet player
+
 get player name
+
 choose random number between 1 and 100
+
 repeat forever:
+
     get guess
+
     if guess is incorrect:
+
         give hint
+
         increase number of guesses
+
     else:
+    
         congratulate player

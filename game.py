@@ -1,21 +1,28 @@
 """A number-guessing game."""
 
 # Put your code here
-import random
+from random import randint
 user_name = input("Hi! What your name? " )
 print(f"Nice to meet you, {user_name}")
-print (f"{user_name} I'm thinking of a number between 1 and 100. Try to guess my number.")
-random_number = random.randint(1, 100)
-print(f"{random_number}")
-count = 0
-while True:
+print(f"{user_name} I'm thinking of a number between 1 and 100. Try to guess my number.")
+random_number = randint(1, 100)
+print(random_number)
+guessing_num = ""
+guess_limit = 0
+out_of_guesses = False 
+
+while guessing_num != random_number and not out_of_guesses:
     guessing_num = int(input ("Enter your guess number: "))
-    count += 1 
-    if guessing_num != random_number:
+    guess_limit += 1 
+    if guess_limit <= 3:
         if guessing_num > random_number:
             print("Your guess is too high, try again.")
-        else: 
+        elif guessing_num < random_number: 
             print("Your guess is too low, try again.")
+        else:
+            print(f"Well done, {user_name}!. You found my number in {guess_limit} tries!")
     else:
-        print(f"Well done, {user_name}!. You found my number in {count} tries!")
-        break;
+        print(f"Sorry, you are out of guessing limit number")
+        break
+
+
