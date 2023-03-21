@@ -8,9 +8,8 @@ print(f"{user_name} I'm thinking of a number between 1 and 100. Try to guess my 
 random_number = randint(1, 100)
 guessing_num = ""
 guess_limit = 0
-out_of_guesses = False 
 
-while guessing_num != random_number and not out_of_guesses:
+while guessing_num != random_number:
     guessing_num = int(input ("Enter your guess number: "))
     guess_limit += 1 
     if guess_limit <= 3:
