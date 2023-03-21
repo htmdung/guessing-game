@@ -6,7 +6,6 @@ user_name = input("Hi! What your name? " )
 print(f"Nice to meet you, {user_name}")
 print(f"{user_name} I'm thinking of a number between 1 and 100. Try to guess my number.")
 random_number = randint(1, 100)
-print(random_number)
 guessing_num = ""
 guess_limit = 0
 out_of_guesses = False 
